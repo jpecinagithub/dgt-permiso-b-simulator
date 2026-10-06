@@ -27,7 +27,7 @@ export default function Layout() {
           >
             DGT <span className="font-medium text-white/80">Test Simulator</span>
           </Link>
-          <nav aria-label="Navegación principal">
+          <nav aria-label="Navegación principal" className="min-w-0">
             <ul className="flex items-center gap-1 overflow-x-auto">
               {NAV_ITEMS.map((item) => (
                 <li key={item.to} className="shrink-0">

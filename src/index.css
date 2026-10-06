@@ -21,6 +21,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Red de seguridad: ningún desbordamiento accidental puede mover
+     la página lateralmente. `clip` no crea contenedor de scroll,
+     así que `position: sticky` sigue funcionando. */
+  overflow-x: clip;
 }
 
 body {
@@ -29,6 +33,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 /* ————————————————————————————————————————————————
