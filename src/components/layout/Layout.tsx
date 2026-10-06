@@ -21,10 +21,10 @@ export default function Layout() {
       </a>
 
       <header className="bg-night text-white">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <div className="mx-auto flex w-full max-w-5xl items-center justify-center gap-4 px-4 py-3 sm:justify-between sm:px-6">
           <Link
             to="/"
-            className="text-lg font-bold tracking-tight whitespace-nowrap"
+            className="hidden text-lg font-bold tracking-tight whitespace-nowrap sm:block"
             aria-label="DGT Test — inicio"
           >
             DGT <span className="font-medium text-white/80">Test</span>
