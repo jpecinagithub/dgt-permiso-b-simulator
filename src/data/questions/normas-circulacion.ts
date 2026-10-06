@@ -1,0 +1,186 @@
+import type { Question } from "./schema";
+
+/**
+ * Bloque 1 — normas-circulacion
+ * Disposiciones legales y reglamentarias: señalización, reglas de prioridad
+ * y limitaciones de velocidad (materia 1.ª del Anexo V, B) 1 del RD 818/2009).
+ */
+export const normasCirculacionQuestions: Question[] = [
+  {
+    id: "norm-001",
+    question:
+      "¿Cuántas preguntas tiene el examen teórico del permiso B y cuántos errores se permiten, como máximo, para obtener el APTO?",
+    answers: [
+      "40 preguntas y un máximo de 4 errores.",
+      "30 preguntas y un máximo de 3 errores.",
+      "30 preguntas y un máximo de 5 errores.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "El examen consta de 30 preguntas tipo test con 3 opciones y 30 minutos de tiempo. Para el APTO, los errores no pueden superar el 10 % de las preguntas formuladas: con 30 preguntas, un máximo de 3 errores (Anexo VI, B) 3 del RD 818/2009).",
+    category: "normas-circulacion",
+    difficulty: "easy",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/act.php?id=BOE-A-2009-9481&tn=1",
+    legalReference: "Anexo VI RD 818/2009",
+    lastVerified: "2026-10-06",
+    active: true,
+    tags: ["examen", "formato"],
+  },
+  {
+    id: "norm-002",
+    question: "En una intersección sin señalizar, ¿qué vehículo tiene preferencia de paso?",
+    answers: [
+      "El que se aproxime por la izquierda.",
+      "El que se aproxime por la derecha.",
+      "El que llegue primero a la intersección, venga por donde venga.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "A falta de señal que regule la preferencia, tiene prioridad el vehículo que se aproxime por la derecha (Art. 57 RGC). «El que llegue primero» es un error típico: la preferencia no depende del orden de llegada.",
+    category: "normas-circulacion",
+    difficulty: "easy",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23514&tn=1",
+    legalReference: "Art. 57 RGC",
+    lastVerified: "2026-10-06",
+    image: "intersection-right",
+    active: true,
+    tags: ["prioridad", "intersección"],
+  },
+  {
+    id: "norm-003",
+    question: "Al aproximarse a una glorieta, ¿qué debe hacer?",
+    answers: [
+      "Entrar con preferencia, porque los que circulan dentro deben ceder el paso.",
+      "Detenerse siempre antes de entrar, aunque no se aproxime ningún vehículo.",
+      "Ceder el paso a los vehículos que ya circulan dentro de la glorieta.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Quien accede a una glorieta debe ceder el paso a los vehículos que circulan por su interior (Art. 57 RGC). Solo es obligatorio detenerse si es necesario para ceder el paso, no en todo caso.",
+    category: "normas-circulacion",
+    difficulty: "easy",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23514&tn=1",
+    legalReference: "Art. 57 RGC",
+    lastVerified: "2026-10-06",
+    image: "roundabout",
+    active: true,
+    tags: ["prioridad", "glorieta"],
+  },
+  {
+    id: "norm-004",
+    question: "¿Qué obligación impone esta señal (R-2)?",
+    answers: [
+      "Reducir la velocidad y continuar si no se aproxima ningún vehículo.",
+      "Detenerse siempre, aunque no circule ningún vehículo por la vía a la que se accede.",
+      "Detenerse solo cuando se aproxime otro vehículo.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "La señal de stop (R-2) obliga a detener el vehículo en todo caso ante la línea de detención, aunque la vía esté despejada. Confundirla con la señal de «ceda el paso» es un error muy frecuente en el examen.",
+    category: "normas-circulacion",
+    difficulty: "easy",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-12199",
+    legalReference: "RD 465/2025 (Catálogo oficial de señales)",
+    lastVerified: "2026-10-06",
+    image: "stop-sign",
+    active: true,
+    tags: ["señalización", "stop"],
+  },
+  {
+    id: "norm-005",
+    question: "¿Qué indica esta señal (R-1)?",
+    answers: [
+      "Prioridad respecto al sentido contrario.",
+      "Ceda el paso: debe dejar pasar a los vehículos que circulen por la vía a la que se aproxima.",
+      "Stop: debe detener el vehículo en todo caso.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "La señal R-1 («ceda el paso») obliga a dejar pasar a los vehículos que circulen por la vía preferente, pero —a diferencia del stop— no exige detenerse si no es necesario para ceder el paso.",
+    category: "normas-circulacion",
+    difficulty: "easy",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-12199",
+    legalReference: "RD 465/2025 (Catálogo oficial de señales)",
+    lastVerified: "2026-10-06",
+    image: "yield-sign",
+    active: true,
+    tags: ["señalización", "prioridad"],
+  },
+  {
+    id: "norm-006",
+    question: "¿Qué prohíbe esta señal (R-101)?",
+    answers: [
+      "La circulación en ambos sentidos.",
+      "El estacionamiento en ambos lados de la vía.",
+      "La entrada a toda clase de vehículos.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "La señal R-101 (círculo rojo con franja blanca horizontal) prohíbe la entrada a la vía o zona en el sentido en que está colocada, a toda clase de vehículos. No prohíbe circular en sentido contrario por donde se venga circulando legalmente.",
+    category: "normas-circulacion",
+    difficulty: "easy",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-12199",
+    legalReference: "RD 465/2025 (Catálogo oficial de señales)",
+    lastVerified: "2026-10-06",
+    image: "no-entry",
+    active: true,
+    tags: ["señalización", "prohibición"],
+  },
+  {
+    id: "norm-007",
+    question:
+      "¿Cuál es la velocidad máxima para un turismo en autopista o autovía, salvo señalización que indique otra?",
+    answers: [
+      "110 km/h.",
+      "130 km/h.",
+      "120 km/h.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "El límite genérico para turismos en autopistas y autovías es 120 km/h (Art. 48 RGC). Recuerde la escala básica: 120 en autopista/autovía, 90 en vía convencional, 50 en poblado y 30 en calles de plataforma única.",
+    category: "normas-circulacion",
+    difficulty: "medium",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23514&tn=1",
+    legalReference: "Art. 48 RGC",
+    lastVerified: "2026-10-06",
+    image: "speed-120",
+    active: true,
+    tags: ["velocidad", "autopista"],
+  },
+  {
+    id: "norm-008",
+    question:
+      "El Catálogo oficial de señales de circulación y marcas viales actualmente vigente se aprobó por el RD 465/2025. ¿Desde cuándo es aplicable?",
+    answers: [
+      "Desde el 1 de julio de 2025.",
+      "Desde el 1 de enero de 2026.",
+      "Desde el 1 de octubre de 2026.",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "El nuevo Catálogo de señales (RD 465/2025, BOE-A-2025-12199) está en vigor desde el 1/7/2025. Las otras dos fechas son trampas típicas: el 1/1/2026 es la obligatoriedad de la baliza V16 conectada y el 1/10/2026 la entrada en vigor de la reforma de usuarios vulnerables (RD 518/2026).",
+    category: "normas-circulacion",
+    difficulty: "hard",
+    sourceType: "equivalent-practice",
+    sourceTitle: "DGT Test Simulator · Banco de práctica equivalente",
+    sourceReference: "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-12199",
+    legalReference: "RD 465/2025 (BOE-A-2025-12199)",
+    lastVerified: "2026-10-06",
+    active: true,
+    tags: ["señalización", "normativa"],
+  },
+];

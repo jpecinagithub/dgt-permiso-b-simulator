@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ————————————————————————————————————————————————
+   Tokens de diseño: fintech minimalista
+   ———————————————————————————————————————————————— */
+@theme {
+  --color-night: #0a1f3c; /* azul noche: texto y cabecera */
+  --color-electric: #1d6ff2; /* azul eléctrico: acento */
+  --color-electric-dark: #1559c4;
+  --color-offwhite: #f7f9fc; /* fondo off-white */
+  --color-neutral-soft: #eef1f6;
+  --color-muted: #5b6b82; /* gris neutro para texto secundario */
+  --color-line: #e2e8f2;
+  --color-success: #15803d; /* verde: SOLO semántico (apto) */
+  --color-danger: #dc2626; /* rojo: SOLO semántico (error) */
+
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-offwhite);
+  color: var(--color-night);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ————————————————————————————————————————————————
+   Accesibilidad
+   ———————————————————————————————————————————————— */
+
+/* Focus visible de alto contraste en toda la app */
+:focus-visible {
+  outline: 3px solid var(--color-electric);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respeta prefers-reduced-motion: sin animaciones ni scroll suave */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Microinteracciones suaves por defecto */
+.transition-soft {
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+/* Skip-link: visible solo al recibir foco */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--color-night);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 1rem;
+}
