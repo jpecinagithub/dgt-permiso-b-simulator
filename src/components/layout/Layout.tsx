@@ -1,14 +1,16 @@
 import { Analytics } from '@vercel/analytics/react'
+import { BookOpen, History, Home, Info, RotateCcw, Timer } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import UpdatePrompt from '../UpdatePrompt'
 
-const NAV_ITEMS = [
-  { to: '/', label: 'Inicio', end: true },
-  { to: '/simulacro', label: 'Simulacro' },
-  { to: '/practica', label: 'Practicar' },
-  { to: '/fallos', label: 'Fallos' },
-  { to: '/historial', label: 'Historial' },
-  { to: '/acerca-de', label: 'Acerca de' },
+const NAV_ITEMS: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
+  { to: '/', label: 'Inicio', icon: Home, end: true },
+  { to: '/simulacro', label: 'Simulacro', icon: Timer },
+  { to: '/practica', label: 'Practicar', icon: BookOpen },
+  { to: '/fallos', label: 'Fallos', icon: RotateCcw },
+  { to: '/historial', label: 'Historial', icon: History },
+  { to: '/acerca-de', label: 'Acerca de', icon: Info },
 ]
 
 export default function Layout() {
@@ -28,21 +30,24 @@ export default function Layout() {
             DGT <span className="font-medium text-white/80">Test</span>
           </Link>
           <nav aria-label="Navegación principal" className="min-w-0">
-            <ul className="flex items-center gap-1 overflow-x-auto">
+            <ul className="flex items-center gap-0 overflow-x-auto sm:gap-1">
               {NAV_ITEMS.map((item) => (
                 <li key={item.to} className="shrink-0">
                   <NavLink
                     to={item.to}
                     end={item.end}
+                    aria-label={item.label}
+                    title={item.label}
                     className={({ isActive }) =>
-                      `transition-soft flex min-h-[44px] items-center rounded-lg px-2 text-sm font-medium sm:px-3 ${
+                      `transition-soft flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg px-2 text-sm font-medium sm:justify-start sm:px-3 ${
                         isActive
                           ? 'bg-white/15 text-white'
                           : 'text-white/70 hover:bg-white/10 hover:text-white'
                       }`
                     }
                   >
-                    {item.label}
+                    <item.icon className="h-5 w-5 sm:hidden" aria-hidden="true" />
+                    <span className="hidden sm:inline">{item.label}</span>
                   </NavLink>
                 </li>
               ))}
