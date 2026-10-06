@@ -23,9 +23,9 @@ export default function Layout() {
           <Link
             to="/"
             className="text-lg font-bold tracking-tight whitespace-nowrap"
-            aria-label="DGT Test Simulator — inicio"
+            aria-label="DGT Test — inicio"
           >
-            DGT <span className="font-medium text-white/80">Test Simulator</span>
+            DGT <span className="font-medium text-white/80">Test</span>
           </Link>
           <nav aria-label="Navegación principal" className="min-w-0">
             <ul className="flex items-center gap-1 overflow-x-auto">
@@ -35,7 +35,7 @@ export default function Layout() {
                     to={item.to}
                     end={item.end}
                     className={({ isActive }) =>
-                      `transition-soft flex min-h-[44px] items-center rounded-lg px-3 text-sm font-medium ${
+                      `transition-soft flex min-h-[44px] items-center rounded-lg px-2 text-sm font-medium sm:px-3 ${
                         isActive
                           ? 'bg-white/15 text-white'
                           : 'text-white/70 hover:bg-white/10 hover:text-white'
